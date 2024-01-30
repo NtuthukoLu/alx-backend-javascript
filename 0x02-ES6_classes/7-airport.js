@@ -4,10 +4,7 @@ export default class Airport {
     this._code = code;
   }
 
-  log(){
-    return `Airport [${this._code}] {_name: '${this._name}', _code: '${this._code}'}`;
-  }
-  toString() {
-    return `[Object ${this._code}]`;
+  get [Symbol.toStringTag]() {
+    return this._code;
   }
 }
