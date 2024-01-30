@@ -4,25 +4,10 @@ export default class Airport {
     this._code = code;
   }
 
-  get name() {
-    return (this._name);
+  log(){
+    return `Airport [${this._code}] {_name: '${this._name}', _code: '${this._code}'}`;
   }
-
-  set name(value) {
-    this._name = value;
-    return value;
-  }
-
-  get code() {
-    return this._code;
-  }
-
-  set code(value) {
-    this._code = value;
-    return value;
-  }
-
   toString() {
-    return (`[Object ${this._code}]`);
+    return `[Object ${this._code}]`;
   }
 }
