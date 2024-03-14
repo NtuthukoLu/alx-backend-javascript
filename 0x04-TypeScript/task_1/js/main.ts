@@ -9,19 +9,21 @@ interface Teacher {
   }
   
   // Create a class for Teacher
-  class TeacherImpl implements Teacher {
+  class DirectorImpl implements Teacher {
     readonly firstName: string;
     readonly lastName: string;
     fullTimeEmployee: boolean;
     yearsOfExperience?: number;
     location: string;
+    numberOfReports: number;
     [key: string]: any;
   
-    constructor(firstName: string, lastName: string, fullTimeEmployee: boolean, location: string, additionalAttributes: Record<string, any> = {}) {
+    constructor(firstName: string, lastName: string, fullTimeEmployee: boolean, location: string, numberOfReports: number, additionalAttributes: Record<string, any> = {}) {
       this.firstName = firstName;
       this.lastName = lastName;
       this.fullTimeEmployee = fullTimeEmployee;
       this.location = location;
+      this.numberOfReports = numberOfReports;
       Object.assign(this, additionalAttributes); // Add additional attributes
     }
   }
