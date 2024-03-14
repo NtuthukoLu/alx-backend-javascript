@@ -28,3 +28,12 @@ interface Teacher {
     }
   }
   
+  //Defining a function for printTeacher
+
+  export function printTeacher(firstName : string, lastName : string){
+    return `${firstName[0]}, ${lastName}}`;
+  }
+  interface printTeacherFunction {
+    firstName : string;
+    lastName : string;
+  }
