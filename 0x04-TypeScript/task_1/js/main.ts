@@ -1,5 +1,5 @@
 // Define the Teacher interface
-export interface ITeacher {
+interface Teacher {
     readonly firstName: string;
     readonly lastName: string;
     fullTimeEmployee: boolean;
@@ -8,12 +8,12 @@ export interface ITeacher {
     [key: string]: any; // Allow adding any additional attribute
   }
   // Define the Directors interface extending the Teacher interface
-export interface IDirectors extends ITeacher {
+interface Directors extends Teacher {
     numberOfReports: number;
   }
   
   // Create a class for Teacher
-export class DirectorImpl implements ITeacher {
+  class DirectorImpl implements Teacher {
     readonly firstName: string;
     readonly lastName: string;
     fullTimeEmployee: boolean;
@@ -34,20 +34,20 @@ export class DirectorImpl implements ITeacher {
   
   //Defining a function for printTeacher
 
-export function printTeacher(firstName : string, lastName : string){
+  export function printTeacher(firstName : string, lastName : string){
     return `${firstName[0]}, ${lastName}}`;
   }
-export interface printTeacherFunction {
+  interface printTeacherFunction {
     firstName : string;
     lastName : string;
   }
 
-export interface IStudent {
+  interface IStudent {
     _firstName : string;
     _lastName : string;
   }
 
-export class StudentClass implements IStudent{
+  class StudentClass implements IStudent{
     _firstName: string;
     _lastName: string;
 
