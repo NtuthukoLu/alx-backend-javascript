@@ -57,3 +57,15 @@ Create a function `createEmployee` with the following requirements:
  * It accepts 1 arguments:
     * `salary`(either number or string)
  * if `salary` is a number and less than 500 - It should return a new     `Teacher`. Otherwise it should return a `Director`
+
+### 6. Creating functions specific to employees - `task_2/js/main.ts`
+Write a function `isDirector`:
+
+ * it accepts `employee` as an argument
+ * it will be used as a type predicate and if the employee is a director
+
+Write a function `executeWork`:
+
+ * it accepts `employee` as an argument
+ * if the employee is a Director, it will call `workDirectorTasks`
+ * if the employee is a Teacher, it will call `workTeacherTasks`

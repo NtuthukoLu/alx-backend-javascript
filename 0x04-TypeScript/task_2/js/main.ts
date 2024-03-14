@@ -57,3 +57,15 @@ export function createEmployee(salary: number)
         return Director;
     }
 }
+
+export function isDirector(employee: Director | Teacher): employee is Director {
+    return (employee as Director).workDirectorTasks !== undefined;
+  }
+  
+export function executeWork(employee: Director | Teacher): void {
+    if (isDirector(employee)) {
+      employee.workDirectorTasks();
+    } else {
+      (employee as Teacher).workTeacherTasks();
+    }
+  }
